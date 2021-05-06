@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+
+# VsCode project files
+.vscode
+
+# react-scaffold folder
+node_modules
+dist
+
+# Mac OS
+.DS_Store
