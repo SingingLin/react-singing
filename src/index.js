@@ -1,21 +1,15 @@
-// ./src/index.js
-const benchmarker = (testFunction, times = 1000000) => {
-  if (typeof testFunction !== 'function') {
-    throw new Error('Did not provide a valid function for test.');
+import bool from './bool';
+import float from './float';
+import integer from './integer';
+
+const choice = (max = 1, min = 0, options = {}) => {
+  if (options.float === true) {
+    return float(max, min);
+  } else if (options.bool === true) {
+    return bool();
+  } else {
+    return integer(max, min);
   }
+}
 
-  const startTime = new Date().getTime();
-
-  let i = 0;
-  while (i < times) {
-    i++;
-    testFunction();
-  }
-
-  const endTime = new Date().getTime();
-
-  return endTime - startTime;
-};
-
-// 匯出函式
-module.exports = benchmarker;
+export default choice;

@@ -1,56 +1,29 @@
 {
   "name": "@singing/react-singing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "just for testing npm publish react ts component",
   "main": "dist/index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack serve --progress",
-    "build:dev": "NODE_ENV=development webpack --config webpack.config.js --progress",
-    "build": "NODE_ENV=production webpack --config webpack.config.js --progress",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier:write": "prettier --write ."
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SingingLin/react-singing.git"
   },
   "keywords": [
     "singing"
   ],
   "author": "SingingLin",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "bugs": {
+    "url": "https://github.com/SingingLin/react-singing/issues"
   },
-  "lint-staged": {
-    "*.{html,css,scss,json}": [
-      "prettier --write"
-    ],
-    "src/**/*.{js,jsx,tsx,ts}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
-  },
+  "homepage": "https://github.com/SingingLin/react-singing#readme",
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13",
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.1",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.2.10",
-    "postcss-loader": "^5.2.0",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "2.2.1",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "url-loader": "^4.1.0",
-    "webpack": "^5.31.2",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {}
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
 }
