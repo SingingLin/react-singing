@@ -1,5 +1,5 @@
 {
-  "name": "@singing/react-singing",
+  "name": "@singinglin/react-singing",
   "version": "0.0.2",
   "description": "just for testing npm publish react ts component",
   "main": "dist/index.js",
